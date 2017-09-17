@@ -7,7 +7,7 @@ abstract class Column
     public $columnName;
     protected $defaultValue;
 
-    public function __construct($columnName, $defaultValue)
+    public function __construct($columnName, $defaultValue = null)
     {
         $this->columnName = $columnName;
         $this->defaultValue = $defaultValue;

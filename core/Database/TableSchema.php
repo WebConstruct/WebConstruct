@@ -7,7 +7,7 @@ use WebConstruct\Core\Database\Columns\Column;
 class TableSchema
 {
     /**
-     * @var $columns array
+     * @var $columns Column[]
      */
     protected $columns;
     protected $tableName;
@@ -22,17 +22,20 @@ class TableSchema
         }
     }
 
-    public function createTable() {
-      $sql = "CREATE TABLE IF NOT EXISTS $this->tableName( ";
-      foreach($this->columns as $column) {
-        $sql.= " ".$column->getCreateTableSyntax()." ";
-      }
+    public function createTable()
+    {
+        $sql = "CREATE TABLE IF NOT EXISTS $this->tableName( ";
+        $columns = [];
 
-      $sql.=" ) ";
-      if($this->getPrimaryKey()) {
-        $sql.="PRIMARY KEY(".$this->getPrimaryKey()->columnName." ) ";
-      }
-      return $sql;
+        foreach ($this->columns as $column) {
+            $columns[] = $column->getCreateTableSyntax();
+        }
+        $sql .= implode(", ", $columns) . " ";
+
+        if ($this->getPrimaryKey()) {
+            $sql .= ", PRIMARY KEY(`" . $this->getPrimaryKey()->columnName . "` ) ";
+        }
+        return $sql . ")";
     }
 
     private function getPrimaryKey() {

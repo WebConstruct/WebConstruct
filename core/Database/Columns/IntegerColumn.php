@@ -25,7 +25,7 @@ class IntegerColumn extends Column
      */
     public function getCreateTableSyntax(): string
     {
-        return "`".$this->columnName."` int unsigned NOT NULL AUTO_INCREMENT";
+        return "`".$this->columnName."` int unsigned NOT NULL";
     }
 
     /**
