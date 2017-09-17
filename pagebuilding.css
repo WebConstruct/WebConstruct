@@ -1,0 +1,554 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
+
+div,input {
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+}
+
+.page-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.content_wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.col_lg-1,.col_lg-2,.col_lg-3,.col_lg-4,.col_lg-5,.col_lg-6,.col_lg-7,.col_lg-8,.col_lg-9,.col_lg-10,.col_lg-11,.col_lg-12,.col_md-1,.col_md-2,.col_md-3,.col_md-4,.col_md-5,.col_md-6,.col_md-7,.col_md-8,.col_md-9,.col_md-10,.col_md-11,.col_md-12,.col_mt-1,.col_mt-2,.col_mt-3,.col_mt-4,.col_mt-5,.col_mt-6,.col_mt-7,.col_mt-8,.col_mt-9,.col_mt-10,.col_mt-11,.col_mt-12,.col_mm-1,.col_mm-2,.col_mm-3,.col_mm-4,.col_mm-5,.col_mm-6,.col_mm-7,.col_mm-8,.col_mm-9,.col_mm-10,.col_mm-11,.col_mm-12,.col_sm-1,.col_sm-2,.col_sm-3,.col_sm-4,.col_sm-5,.col_sm-6,.col_sm-7,.col_sm-8,.col_sm-9,.col_sm-10,.col_sm-11,.col_sm-12 {
+    min-height: 1px;
+    float: left;
+    display: block;
+}
+
+/*==============================*/
+/*=====LARGE DESKTOP DEVICES====*/
+/*==============================*/
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+
+    main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+    .container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+        height: 100%;
+    }
+
+    .col_lg-1 {
+        width: 90px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-2 {
+        width: 190px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-3 {
+        width: 290px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-4 {
+        width: 390px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-5 {
+        width: 490px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-6 {
+        width: 590px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-7 {
+        width: 690px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-8 {
+        width: 790px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-9 {
+        width: 890px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-10 {
+        width: 990px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-11 {
+        width: 1090px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_lg-12 {
+        width: 1190px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*==============================*/
+/*====MEDIUM DESKTOP DEVICES====*/
+/*==============================*/
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+    .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .col_md-1 {
+        width: 70px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-2 {
+        width: 150px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-3 {
+        width: 230px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-4 {
+        width: 310px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-5 {
+        width: 390px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-6 {
+        width: 470px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-7 {
+        width: 550px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-8 {
+        width: 630px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-9 {
+        width: 710px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-10 {
+        width: 790px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-11 {
+        width: 870px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_md-12 {
+        width: 950px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*==============================*/
+/*====MEDIUM DEVICES TABLETS====*/
+/*==============================*/
+@media screen and (min-width: 660px) and (max-width: 959px) {
+    html {
+        font-size: 13px;
+    }
+
+    main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+    .container {
+    width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .col_mt-1 {
+        width: 45px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-2 {
+        width: 100px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-3 {
+        width: 155px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-4 {
+        width: 210px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-5 {
+        width: 265px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-6 {
+        width: 320px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-7 {
+        width: 375px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-8 {
+        width: 430px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-9 {
+        width: 485px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-10 {
+        width: 540px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-11 {
+        width: 595px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mt-12 {
+        width: 650px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*==============================*/
+/*=====MEDIUM DEVICES MOBILE====*/
+/*==============================*/
+@media screen and (min-width: 480px) and (max-width: 659px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+    .container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .col_mm-1 {
+        width: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-2 {
+        width: 60px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-3 {
+        width: 100px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-4 {
+        width: 140px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-5 {
+        width: 190px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-6 {
+        width: 230px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-7 {
+        width: 270px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-8 {
+        width: 310px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-9 {
+        width: 350px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-10 {
+        width: 390px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-11 {
+        width: 430px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_mm-12 {
+        width: 470px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/*==============================*/
+/*=====SMALL DEVICES MOBILE=====*/
+/*==============================*/
+@media screen and (max-width: 479px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    }
+
+    .container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .col_sm-1 {
+        width: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-2 {
+        width: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-3 {
+        width: 65px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-4 {
+        width: 90px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-5 {
+        width: 115px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-6 {
+        width: 140px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-7 {
+        width: 165px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-8 {
+        width: 190px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-9 {
+        width: 215px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-10 {
+        width: 240px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-11 {
+        width: 265px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .col_sm-12 {
+        width: 290px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+
+/*==============================*/
+/*=====PAGEBUILDING ELEMENTS====*/
+/*==============================*/
+.text_center {
+    text-align: center;
+}
+
+.center-x {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-y {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content-gap {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/*==============================*/
+/*========PRESET ELEMENTS=======*/
+/*==============================*/
+/*HEAD ELEMENTS*/
+.page_header,.page_footer {
+    z-index: 50;
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page_header {
+    height: 60px;
+    position: fixed;
+}
+/*==========FORM PRESET=========*/
+.formlist {
+    list-style-type: none;
+}
+
+.formlist ul {
+    text-decoration: none;
+}
+
+.form-title h1 {
+    border-bottom: 1px solid #000;
+}
