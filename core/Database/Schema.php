@@ -2,27 +2,37 @@
 
 namespace WebConstruct\Core\Database;
 
+use PDO;
+use PDOException;
+
 abstract class Schema
 {
+    /**
+     * @var $tables Table[]
+     */
   private $tables;
-  public function addTables(Table ...$table) {
+
+  public function addTables(Table ...$tables) {
     foreach ($tables as $table) {
         $this->tables[] = $table;
     }
   }
 
-  public function connectDB() {
-    try{
-        $pdo = new PDO ("mysql:host=".$DatabaseSettings::$host.";
-                          dbname=".$DatabaseSettings::$database.\"",
-                          $DatabaseSettings::$username,
-                          $DatabaseSettings::$password);
+    public function connectDB()
+    {
+        $pdo = null;
+        try {
+            // TODO: Use singleton pattern
+            // $databaseSettings = DatabaseSettings::singleton();
+            $pdo = new PDO ("mysql:host=localhost;dbname=testing",
+                "root",
+                ""
+            );
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+        return $pdo;
     }
-    catch(PDOException $e){
-        echo $e->getMessage();
-    }
-    return $pdo;
-  }
 
   public function updateSchemas() {
     $pdo = $this->connectDB();

@@ -4,9 +4,17 @@ namespace WebConstruct\Core\Database;
 
 class DatabaseSettings
 {
-    public static $host;
-    public static $port;
-    public static $database;
-    public static $username;
-    public static $password;
+    /**
+     * @return static
+     */
+    final public static function singleton()
+    {
+        return new static();
+    }
+
+    public $host;
+    public $port;
+    public $database;
+    public $username;
+    public $password;
 }
