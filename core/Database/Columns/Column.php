@@ -4,7 +4,7 @@ namespace WebConstruct\Core\Database\Columns;
 
 abstract class Column
 {
-    protected $columnName;
+    public $columnName;
     protected $defaultValue;
 
     public function __construct($columnName, $defaultValue)

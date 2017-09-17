@@ -6,29 +6,14 @@ use WebConstruct\Core\Database\Columns\Column;
 
 class TableSchema
 {
-    private $isNewRecord = true;
-
-    final public function __construct($rowId = 0)
-    {
-        if ($rowId > 0) {
-            $this->populateRecordData();
-            $this->isNewRecord = false;
-        }
-    }
-
-    public function isNewRecord()
-    {
-        return $this->isNewRecord;
-    }
-
     /**
      * @var $columns array
      */
     protected $columns;
-    /**
-     * @var $modelData array
-     */
-    protected $data;
+    protected $tableName;
+    public function __construct($tableName) {
+      $this->tableName = $tableName;
+    }
 
     final public function addColumns(Column ...$columns)
     {
@@ -37,26 +22,26 @@ class TableSchema
         }
     }
 
-    public function populateRecordData()
-    {
-        foreach ($this->columns as $column) {
-            // TODO: load each row into the record data
-        }
+    public function createTable() {
+      $sql = "CREATE TABLE IF NOT EXISTS $this->tableName( ";
+      foreach($this->columns as $column) {
+        $sql.= " ".$column->getCreateTableSyntax()." ";
+      }
+
+      $sql.=" ) ";
+      if($this->getPrimaryKey()) {
+        $sql.="PRIMARY KEY(".$this->getPrimaryKey()->columnName." ) ";
+      }
+      return $sql;
     }
 
-    public function save()
-    {
-        foreach ($this->columns as $column) {
+    private function getPrimaryKey() {
 
+      foreach($this->columns as $column) {
+        if($column->isPrimaryKey() == true) {
+          return $column;
         }
-        // TODO: Insert or Update
+      }
+      return false;
     }
-
-    public function delete()
-    {
-        foreach ($this->columns as $column) {
-            // TODO: Delete
-        }
-    }
-
 }
