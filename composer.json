@@ -1,0 +1,13 @@
+{
+    "name": "webconstruct/webconstruct",
+    "description": "An open source framwork for building websires",
+    "type": "library",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "WebConstruct\\": "src/"
+        }
+    },
+    "require": {},
+    "require-dev":{}
+}
