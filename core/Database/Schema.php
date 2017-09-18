@@ -22,11 +22,10 @@ abstract class Schema
     {
         $pdo = null;
         try {
-            // TODO: Use singleton pattern
-            // $databaseSettings = DatabaseSettings::singleton();
-            $pdo = new PDO ("mysql:host=localhost;dbname=testing",
-                "root",
-                ""
+             $databaseSettings = DatabaseSettings::singleton();
+            $pdo = new PDO ("mysql:host=".$databaseSettings->host.";dbname=".$databaseSettings->database,
+                $databaseSettings->username,
+                $databaseSettings->password
             );
         } catch (PDOException $e) {
             echo $e->getMessage();

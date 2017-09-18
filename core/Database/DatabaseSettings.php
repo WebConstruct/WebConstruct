@@ -4,12 +4,17 @@ namespace WebConstruct\Core\Database;
 
 class DatabaseSettings
 {
+    private static $instance;
     /**
      * @return static
      */
     final public static function singleton()
     {
-        return new static();
+        if(!self::$instance)
+        {
+            self::$instance = new self();
+        }
+        return self::$instance;
     }
 
     public $host;

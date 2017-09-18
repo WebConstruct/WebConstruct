@@ -2,6 +2,7 @@
 
 namespace WebConstruct\Core\Database;
 
+use WebConstruct\Core\Database\Columns\AutoIncrementColumn;
 use WebConstruct\Core\Database\Columns\Column;
 
 class TableSchema
@@ -41,7 +42,7 @@ class TableSchema
     private function getPrimaryKey() {
 
       foreach($this->columns as $column) {
-        if($column->isPrimaryKey() == true) {
+        if(is_a($column, AutoIncrementColumn::class) == true) {
           return $column;
         }
       }

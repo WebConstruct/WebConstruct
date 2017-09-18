@@ -2,14 +2,10 @@
 
 include_once "../../vendor/autoload.php";
 
-include_once "../../settings/settings.example.php";
+$pathToSettings = "../../settings/settings.php";
 
-$schema = new \WebConstruct\Application\PagesSchema();
-try
-{
-    $schema->updateSchemas();
-} catch (Exception $exception)
-{
-    print "<pre>";
-    print $exception->getMessage();
+if (!file_exists($pathToSettings)) {
+    throw new SettingsNotImplementedException("You need to create a settings file! See settings/settings.example.php");
 }
+
+include_once $pathToSettings;
